@@ -1,0 +1,15 @@
+name: Tag Example
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  validate:
+    name: Tagging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: npm install
+        run: echo 'hello world'
